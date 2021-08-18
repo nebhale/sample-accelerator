@@ -21,7 +21,8 @@ accelerator:
     required: true
 
 engine:
-  chain:
+  merge:
+  - include: ["**"]
   - include: ["config/workload.yaml", "Tiltfile"]
     chain:
     - type: ReplaceText
