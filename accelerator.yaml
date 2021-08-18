@@ -21,7 +21,6 @@ accelerator:
     required: true
 
 engine:
-  include: ["**"]
   chain:
   - include: ["config/workload.yaml", "Tiltfile"]
     chain:
