@@ -3,38 +3,21 @@ accelerator:
   description: Generate a new Spring Boot application
   iconUrl: https://raw.githubusercontent.com/nebhale/sample-accelerator/main/icon.png
   tags:
-    - Spring Boot
-    - Java
-    - Reactive
+  - Spring Boot
+  - Java
+  - Reactive
   options:
-    - name: groupId
-      label: Maven GroupId
-      description: The Maven GroupId for the project
-      required: true
-      dataType: string
-      inputType: text
-    - name: artifactId
-      label: Maven ArtifactId
-      description: The Maven ArtifactId for the project
-      required: true
-      dataType: string
-      inputType: text
-    - name: gitUrl
-      label: Git Repository URL
-      description: GitHub or GitLab repository url
-      dataType: string
-      inputType: text
-      required: true
-    - name: authorName
-      label: Author Name
-      description: The name of the project author
-      dataType: string
-      inputType: text
-    - name: authorEmail
-      label: Author Email Address
-      description: The email address of the project author
-      dataType: string
-      inputType: text
+
+  - name: select
+    inputType: select
+    display: true
+    choices:
+    - text: harbor-repo.vmware.com/bhale
+      value: harbor-repo.vmware.com/bhale
+    - text: index.docker.io/nebhale
+      value: index.docker.io/nebhale
+    - text: gcr.io/nebhale
+      value: gcr.io/nebhale
 
 engine:
   resources:
