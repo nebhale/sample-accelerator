@@ -1,4 +1,4 @@
-custom_build('harbor-repo.vmware.com/bhale/sample-application',
+custom_build('artifact-registry/sample-application',
   'tanzu apps workload apply -f config/workload.yaml --local-path=. --yes && \
     while [[ $(kubectl get ksvc sample-app-java -o \'jsonpath={..status.conditions[?(@.type=="Ready")].status}\') != "True" ]]; do echo "waiting for ksvc" && sleep 10; done',
   ['pom.xml', './target/classes'],

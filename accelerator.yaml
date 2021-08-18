@@ -8,7 +8,7 @@ accelerator:
   - Reactive
   options:
 
-  - name: registry
+  - name: artifact-registry
     label: Artifact Registry
     inputType: select
     choices:
@@ -26,4 +26,6 @@ engine:
   - include: ["config/workload.yaml", "Tiltfile"]
     chain:
     - type: ReplaceText
-      substitutions: []
+      substitutions:
+      - text: "artifact-registry"
+        with: "#artifact-registry"

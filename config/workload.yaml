@@ -5,8 +5,8 @@ metadata:
   name: sample-application
   labels:
     app.tanzu.vmware.com/workload-type: web
-  run-image: harbor-repo.vmware.com/bhale/sample-application
+  run-image: artifact-registry/sample-application
 spec:
   source:
     imgpkgBundle:
-      image: harbor-repo.vmware.com/bhale/sample-application-source
+      image: artifact-registry/sample-application-source
