@@ -22,7 +22,7 @@ accelerator:
 
 engine:
   merge:
-  - include: ["**"]
+  - include: ["**/*", "**/.*"]
   - include: ["config/workload.yaml", "Tiltfile"]
     chain:
     - type: ReplaceText
