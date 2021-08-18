@@ -30,4 +30,4 @@ engine:
       - text: "artifact-registry"
         with: "#artifactRegistry"
       - text: "project-name"
-        with: "#name"
+        with: "#projectName"
