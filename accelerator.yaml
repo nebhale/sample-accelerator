@@ -22,8 +22,8 @@ accelerator:
 
 engine:
   merge:
-  - include: ["**/*", "**/.*"]
-  - include: ["config/workload.yaml", "Tiltfile"]
+  - include: ["**"]
+  - include: ["config/workload.yaml", "settings.gradle", "Tiltfile"]
     chain:
     - type: ReplaceText
       substitutions:
