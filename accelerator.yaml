@@ -9,6 +9,7 @@ accelerator:
   options:
 
   - name: select
+    description: Registry
     inputType: select
     display: true
     choices:
