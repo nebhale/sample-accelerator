@@ -9,9 +9,8 @@ accelerator:
   options:
 
   - name: registry
-    description: Registry
+    label: Artifact Registry
     inputType: select
-    display: true
     choices:
     - text: harbor-repo.vmware.com/bhale
       value: harbor-repo.vmware.com/bhale
@@ -19,8 +18,11 @@ accelerator:
       value: index.docker.io/nebhale
     - text: gcr.io/nebhale
       value: gcr.io/nebhale
+    required: true
 
 engine:
-  resources:
-  - name: all
-    includes: ["**"]
+  include: ["**"]
+  chain:
+  - type: ReplaceText
+    include: ["config/workload.yaml", "Tiltfile"]
+    substitutions: []
