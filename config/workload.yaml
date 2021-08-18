@@ -2,11 +2,11 @@
 apiVersion: kontinue.io/v1alpha1
 kind: Workload
 metadata:
-  name: sample-application
+  name: project-name
   labels:
     app.tanzu.vmware.com/workload-type: web
-  run-image: artifact-registry/sample-application
+  run-image: artifact-registry/project-name
 spec:
   source:
     imgpkgBundle:
-      image: artifact-registry/sample-application-source
+      image: artifact-registry/project-name-source
