@@ -8,7 +8,7 @@ accelerator:
   - Reactive
   options:
 
-  - name: select
+  - name: registry
     description: Registry
     inputType: select
     display: true
@@ -22,5 +22,5 @@ accelerator:
 
 engine:
   resources:
-    - name: all
-      includes: ["**"]
+  - name: all
+    includes: ["**"]
