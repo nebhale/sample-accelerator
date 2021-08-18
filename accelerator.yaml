@@ -23,6 +23,7 @@ accelerator:
 engine:
   include: ["**"]
   chain:
-  - type: ReplaceText
-    include: ["config/workload.yaml", "Tiltfile"]
-    substitutions: []
+  - include: ["config/workload.yaml", "Tiltfile"]
+    chain:
+    - type: ReplaceText
+      substitutions: []
