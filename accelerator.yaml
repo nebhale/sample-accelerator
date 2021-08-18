@@ -8,7 +8,7 @@ accelerator:
   - Reactive
   options:
 
-  - name: artifact-registry
+  - name: artifactRegistry
     label: Artifact Registry
     inputType: select
     choices:
@@ -28,4 +28,4 @@ engine:
     - type: ReplaceText
       substitutions:
       - text: "artifact-registry"
-        with: "#artifact-registry"
+        with: "#artifactRegistry"
