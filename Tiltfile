@@ -1,7 +1,7 @@
 custom_build('artifact-registry/project-name',
   'tanzu apps workload apply -f config/workload.yaml --local-path=. --yes && \
     while [[ $(kubectl get ksvc project-name -o \'jsonpath={..status.conditions[?(@.type=="Ready")].status}\') != "True" ]]; do echo "waiting for ksvc" && sleep 10; done',
-  ['pom.xml', './target/classes'],
+  ['pom.xml', './bin/main'],
   live_update = [
     sync('./bin/main', '/workspace/BOOT-INF/classes')
   ],
