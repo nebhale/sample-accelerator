@@ -8,6 +8,18 @@ accelerator:
   - Reactive
   options:
 
+  - name: gitOrganization
+    label: Git Organization
+    inputType: select
+    choices:
+    - text: gitlab.eng.vmware.com/bhale
+      value: gitlab.eng.vmware.com/bhale
+    - text: github.com/nebhale
+      value: github.com/nebhale
+    - text: bitbucket.org/nebhale
+      value: bitbucket.org/nebhale
+    required: true
+
   - name: artifactRegistry
     label: Artifact Registry
     inputType: select
@@ -29,5 +41,7 @@ engine:
       substitutions:
       - text: "artifact-registry"
         with: "#artifactRegistry"
+      - text: "git-organization"
+        with: "#gitOrganization"
       - text: "project-name"
         with: "#projectName"

@@ -5,8 +5,7 @@ metadata:
   name: project-name
   labels:
     app.tanzu.vmware.com/workload-type: web
-  run-image: artifact-registry/project-name
 spec:
   source:
-    imgpkgBundle:
-      image: artifact-registry/project-name-source
+    git:
+      url: https://git-organization/project-name.git
